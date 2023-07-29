@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dirección de Envío y Pago</title>
+</head>
+<body>
+    <h1>Dirección de Envío y Pago</h1>
+    <p>Por favor, ingresa los detalles de tu dirección de envío y elige el método de pago:</p>
+
+    <form action="procesar_compra.php" method="POST">
+        <h2>Dirección de Envío</h2>
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required>
+
+        <label for="ciudad">Ciudad:</label>
+        <input type="text" id="ciudad" name="ciudad" required>
+
+        <label for="codigo_postal">Código Postal:</label>
+        <input type="text" id="codigo_postal" name="codigo_postal" required>
+
+        <label for="pais">País:</label>
+        <input type="text" id="pais" name="pais" value="Nombre del País" readonly>
+
+        <h2>Método de Pago</h2>
+        <label for="tarjeta">Número de Tarjeta:</label>
+        <input type="text" id="tarjeta" name="tarjeta" required>
+
+        <label for="vencimiento">Fecha de Vencimiento:</label>
+        <input type="text" id="vencimiento" name="vencimiento" required placeholder="MM/AA">
+
+        <label for="codigo_seguridad">Código de Seguridad:</label>
+        <input type="text" id="codigo_seguridad" name="codigo_seguridad" required>
+
+        <h2>¿Desea Factura?</h2>
+        <label>
+            <input type="radio" name="factura" value="si"> Sí
+        </label>
+        <label>
+            <input type="radio" name="factura" value="no" checked> No
+        </label>
+
+        <h2>Aceptar Términos y Condiciones</h2>
+        <input type="checkbox" id="aceptar" name="aceptar" required>
+        <label for="aceptar">He leído y acepto los <a href="terminos_condiciones.html" target="_blank">Términos y Condiciones</a> y las <a href="politicas_privacidad.html" target="_blank">Políticas de privacidad</a>.</label>
+
+        <br>
+
+        <button type="submit" style="font-size: 24px;">Continuar con la compra</button>
+    </form>
+</body>
+</html>
